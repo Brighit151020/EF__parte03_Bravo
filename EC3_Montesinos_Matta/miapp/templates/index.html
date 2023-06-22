@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block title %}
+{{titulo}}
+{% endblock %}
+{% block content %}
+<!--Comentario en HTML-->
+{% comment 'Datos de la pagina index' %}
+En esta pagina se mostrara la bienvenida al sistema
+{% endcomment %}
+<h1 class="title">Bienvenidos al curso de LP3 en la UNTELS {{titulo}}</h1>
+{% include 'listado_cursosregistrados.html' with encabezado="Cursos de carrera" %}
+
+{% endblock %}

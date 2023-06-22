@@ -53,7 +53,6 @@
 footer{
     width: 100;
     background-color: #1B73CB;
-    color: #d1d4d6;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -70,7 +69,14 @@ footer{
         </div>
         </header>
     <nav>
+        <ul>
+            <li>
+                <a href="{% url 'inicio' %}"> Inicio</a>
+                </li>
+        
+       
       
+        </ul>
     </nav>
     <div class="barra">
         <span class="esquina-izquierda"></span>
@@ -79,10 +85,14 @@ footer{
         </div>
         
         <div id="content">
-           
+            <div class="box">
+            {% block content %}
+                <strong> Contenido en layout (Padre) </strong>
+            {% endblock %}
+                </div>
         </div>
         <footer>
-        UNTELS - Lenguaje de Programación III &copy; Juan Montesinos - {% now "d/m/Y h:m:s" %}
+        UNTELS - Lenguaje de Programación III &copy; Rivera Caso - {% now "d/m/Y h:m:s" %}
             
         </footer>
 
